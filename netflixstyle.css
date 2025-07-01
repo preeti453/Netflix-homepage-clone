@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif; 
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    background-image: url(images/bg.jpg);
+    background-position: center center; 
+    background-size: max(1200px, 100vw);/*this means if the vw is smaller than 1200px image is positioned at 1200px and of vw is greater than 1200px ,image is positioned at 100vw*/
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+    
+}
+
+.main .box{
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position:absolute;
+    top: 0;
+    
+}
+
+nav{
+    
+    margin: auto;
+    max-width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 15px;
+}
+
+nav img{
+    width: 126px;
+    position: relative; /*image to saaf saaf dikhane k liya kra ye*/
+    z-index: 12px;
+}
+
+nav button{
+    position: relative; 
+    z-index: 12px;
+}
+
+.hero{
+    font-family:"Martel Sans", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height:calc(100% - 100px);    /*doing this because line can attach to the background image*/
+    position: relative;
+    gap: 10px;
+    padding: 0px 29px; /*making the top bottom padding 0 so that separation line can adjust*/
+
+}
+
+.hero >:first-child{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hero> :nth-child(2){
+    font-weight: 300;
+    text-align: center;
+}
+.hero> :last-child{
+    font-size: small;
+    font-weight: 300;
+    text-align: center;
+}
+
+.separation{
+    height: 7px;
+    background-color: rgb(61, 60, 60);
+    position: relative;
+    z-index: 15;
+    margin: 0px;
+}
+.hero-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 3px 20px;
+    background-color: rgba(23,23,23, 0.4);
+    color: white;
+    font-size: l400;
+    border: 1px solid  rgba(246, 238, 238, 0.7);
+    border-radius: 3px;
+}
+
+.red-btn{
+    background-color: red;
+    color: white;
+    padding: 7px 24px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.red-btn-sm{
+    background-color: red;
+    color: white;
+}
+
+.main input{
+    padding: 14px 101px 12px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: rgba(23,23,23, 0.4);
+    border: 1px solid rgba(246, 238, 238, 0.5) ;
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 70vw;
+    margin: auto auto;
+
+    
+}
+
+
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 455px;
+    position: relative; /*making position relative so that img and video can overlap*/
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;  /*making it absolute so that it can overlap with image*/
+    top: 51px;
+    right: 0;
+    width: 455px;
+}
+
+
+section.first> div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0px;
+}
+
+section.first> div :first-child{
+    font-size: 35px;
+    font-weight:bolder ;
+}
+
+section.first> div :nth-child(2){
+    font-size: 15px;
+    
+}
+
+.faq{
+    color:white;
+    padding: 24px;
+}
+
+.faq h2{
+    text-align: center;
+    font-size: 38px;
+}
+
+.faqbox:hover{
+    background-color: rgb(18, 17, 17);
+}
+
+.faqbox{
+    transition: all 1s ease-out;
+    border: 2px solid rgb(65, 61, 61);
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    color: white;
+    background-color: rgb(47, 47, 47);
+    max-width: 60vw;
+    margin: 14px auto;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.faqbox svg{
+    color: white;
+}
+
+footer {
+    background: black;
+    color: #b3b3b3;
+    padding: 40px 15%;
+    font-size: 14px;
+}
+
+footer .questions {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.language-select {
+    margin: 15px 0;
+}
+
+select {
+    padding: 5px;
+    background: #333;
+    color: white;
+    border: none;
+}
+
+@media  screen and (max-width:1200px) {
+
+    nav{
+        max-width: 90vw;
+    }
+    .first{
+        flex-wrap: wrap;
+    }
+
+    .secImg img{
+        width:305px;
+    }
+
+    .secImg video{
+        width: 305px;
+    }
+
+}
+
